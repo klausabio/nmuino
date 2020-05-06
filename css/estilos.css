@@ -1,0 +1,406 @@
+  /* WOW MOBILE DISABLE FIX */
+  @media screen and (max-width: 800px)  {
+      .wow {
+        visibility: visible !important;
+        -webkit-animation: none !important;
+           -moz-animation: none !important;
+             -o-animation: none !important;
+            -ms-animation: none !important;
+                animation: none !important;
+      }
+  }
+
+  .queryloader__overlay__percentage {
+    font-size: 24px !important;
+    letter-spacing: 2px;
+    top: 52% !important;
+  }
+
+  body, a, a:hover, div, html, .logo, .logo:hover {
+    cursor: url('../images/dot.png'),auto;
+  }
+
+  body {
+    font-family: 'Calibre-Light', sans-serif !important;
+    background-color: #fff;
+  }
+
+  a {
+    -webkit-transition: all .3s ease-in;
+    -moz-transition: all .3s ease-in;
+    -o-transition: all .3s ease-in;
+    -ms-transition: all .3s ease-in;
+    transition: all .3s ease-in;
+  }
+
+  p a {
+    color: #000;
+    text-decoration: underline;
+        -webkit-transition: all .3s ease-in;
+    -moz-transition: all .3s ease-in;
+    -o-transition: all .3s ease-in;
+    -ms-transition: all .3s ease-in;
+    transition: all .3s ease-in;
+  }
+
+   p a:hover {
+    color: #ff0000;
+      text-decoration: underline;
+  }
+
+  .cover {
+    height:100vh;
+    color:#000;
+    position: relative;
+}
+
+  .cover h1 {
+    position: absolute;
+    font-family: 'ITCAvantGardeStd-Bold', sans-serif;
+    font-weight: normal;
+    letter-spacing: -5px;
+    -webkit-font-smoothing: antialiased !important;
+    bottom: 35px;
+    font-size: 95px;
+    z-index: 110;
+    line-height: 90px;
+  }
+
+  /* FIX */
+  @media screen and (max-width: 400px)  {
+    .cover h1 {
+      font-size: 48px;
+      line-height: 48px;
+      bottom: 15px;
+      letter-spacing: -2px;
+    }
+  }
+
+
+  .cover img {
+    position: absolute;
+    bottom: 100px;
+    right: 0px;
+    max-width: 90%;
+    z-index: 100;
+
+  }
+
+.logo{
+    position: fixed;
+    width: 220px;
+    height: 53px;
+    left: 40px;
+    top: 27px;
+        display: block;
+    z-index: 10;
+    cursor: pointer;
+        -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+.logo > img{
+    display: block;
+    width: 220px;
+    height: 53px;
+    position: fixed;
+    /* transitions */
+    -webkit-transition: all .4s ease;
+       -moz-transition: all .4s ease;
+        -ms-transition: all .4s ease;
+         -o-transition: all .4s ease;
+            transition: all .4s ease;
+                -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+    
+}
+/*     solution 1: css3 solution, it depends of <img>'s order */
+
+.logo > img:nth-child(1){ /* first <img> child of <.logo> */
+    filter: alpha(opacity=100); /* IE stuff */
+    opacity: 1;
+    z-index: 2;
+}
+.logo > img:nth-child(2){ /* second <img> child of <.logo> */
+    filter: alpha(opacity=0); /* IE stuff */
+    opacity: 0;
+    z-index: 1;
+}
+/* hover */
+.logo:hover > img:nth-child(1){ 
+    filter: alpha(opacity=0);
+    opacity: 0;
+    z-index: 1;
+}
+.logo:hover > img:nth-child(2){ 
+    filter: alpha(opacity=100);
+    opacity: 1;
+    z-index: 2;
+
+}
+
+
+    /* FIX */
+  @media screen and (max-width: 400px)  {
+      .logo {
+		    left: 20px;
+		    position: fixed;
+		    z-index: 99999;
+      }
+  }
+
+
+.email {
+  position: fixed;
+  bottom: 230px;
+  left: -145px;
+  font-family: 'Calibre-Light', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  z-index: 555;
+  width: 380px;
+  height: 20px;
+  letter-spacing: 0.2px;
+  text-align: left;
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -webkit-animation: fade_left 0.7s ease;
+  animation: fade_left 0.7s ease;
+}
+  .email a {
+    color: #000;
+      -webkit-transition: all .3s ease-in-out;
+      -moz-transition: all .3s ease-in-out;
+      -o-transition: all .3s ease-in-out;
+      transition: all .3s ease-in-out;
+    }
+    .email a:hover {
+    color: #ff0000;
+    text-decoration: none
+    }
+
+
+/* FIX */
+@media screen and (max-width: 990px)  {
+  .email {
+    display: none;
+  }
+}
+
+.navegacion {
+  display: block;
+  position: fixed;
+  font-family: 'Calibre-Light', sans-serif;
+    font-size: 16px;
+  font-weight: 400;
+  top: 235px;
+  z-index: 555;
+  letter-spacing: 0.2px;
+  right: -140px;
+  height: 20px;
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+}
+  .navegacion ul {
+      list-style-type: disc;
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  -webkit-padding-start: 40px;
+  }
+  .navegacion ul li {
+      float: right;
+  list-style-type: none;
+  margin-left: 56px;
+  letter-spacing: 0.6px;
+  }
+  .navegacion ul li a {
+     color: #000 !important;
+     -webkit-transition: all .3s ease-in-out;
+      -moz-transition: all .3s ease-in-out;
+      -o-transition: all .3s ease-in-out;
+      transition: all .3s ease-in-out;
+  }
+   .navegacion ul li a:hover {
+     color: #ff0000 !important;
+     text-decoration: none;
+  }
+
+  /* FIX */
+@media screen and (max-width: 990px)  {
+  .navegacion {
+    display: none;
+  }
+}
+
+/* SELECTED PROYECTS */
+
+.works {
+    color:#000;
+    position: relative;
+}
+
+  .works p {
+    font-family: 'Calibre-Light', sans-serif;
+    font-size: 22px;
+    line-height: 26px;
+    padding-top: 7%;
+     padding-left: 5px;
+   font-weight: 400;
+   letter-spacing: .5px;
+  }
+    /* FIX */
+  @media screen and (max-width: 400px)  {
+    .works p {
+      font-size: 20px;
+      line-height: 23px;
+    }
+  }
+
+  .works h2 {
+    font-family: 'ITCAvantGardeStd-Bold', sans-serif;
+    font-weight: normal;
+    letter-spacing: -2px;
+    -webkit-font-smoothing: antialiased; !important;
+    font-size: 45px;
+     padding-top: 8%;
+    z-index: 110;
+    line-height: 50px;
+  }
+
+  .work-title {
+    font-family: 'ITCAvantGardeStd-Bold', sans-serif;
+    font-weight: normal;
+    letter-spacing: -2px;
+    -webkit-font-smoothing: antialiased; !important;
+    font-size: 35px;
+    line-height: 35px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+.portfolio {
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
+.portfolio-item {
+  padding: 0px !important;
+  margin: 0px
+}
+  .portfolio-item img {
+    margin-top: -1px;
+    width: 100% !important
+  }
+
+    .right {
+      text-align: right;
+    }
+
+.active {
+  color: #ff0000 !important;
+}
+
+
+.contact {
+    color:#000;
+    position: relative;
+}
+
+  .contact p {
+    font-family: 'Calibre-Light', sans-serif;
+    font-size: 20px;
+    line-height: 24px;
+    padding-top: 10%;
+     padding-left: 0px;
+     padding-right: 0px;
+   font-weight: 400;
+  }
+
+      /* FIX */
+  @media screen and (max-width: 990px)  {
+    .contact p {
+  padding-top: 2%;
+    }
+  }
+
+  .contact p a {
+    color: #999;
+      -webkit-transition: all .3s ease-in-out;
+      -moz-transition: all .3s ease-in-out;
+      -o-transition: all .3s ease-in-out;
+      transition: all .3s ease-in-out;
+      text-decoration: none;
+  }
+    .contact p a:hover {
+      color: #ff0000;
+      text-decoration: none;
+    }
+
+ .contact h2 {
+    font-family: 'ITCAvantGardeStd-Bold', sans-serif;
+    font-weight: normal;
+    letter-spacing: -3px;
+    font-size: 70px;
+     padding-top: 45px;
+     -webkit-font-smoothing: antialiased !important;
+    z-index: 110;
+    line-height: 60px;
+  }
+
+        /* FIX */
+  @media screen and (max-width: 990px)  {
+    .contact h2 {
+      padding-top: 15px;
+    }
+  }
+
+   .contact h3 {
+    font-family: 'ITCAvantGardeStd-Bold', sans-serif;
+    font-weight: normal !important;
+    letter-spacing: -0.7px;
+    font-size: 27px;
+    position: absolute;
+    bottom: -188px;
+    z-index: 110;
+    -webkit-font-smoothing: antialiased !important;
+    line-height: 27px;
+  }
+
+        /* FIX */
+  @media screen and (max-width: 990px)  {
+    .contact h3 {
+      padding-top: 30px;
+      position: relative !important;
+      bottom: 0px
+    }
+  }
+
+.foot {
+  font-size: 18px;
+  padding-left: 10px;
+  padding-top: 20px;
+  border-top: 1px solid #999;
+  margin-top: 40px;
+  line-height: 17px;
+  color: #999;
+  padding-bottom: 20px;
+}
+
+
+.embed-responsive-16by9 {
+    padding-bottom: 75%;
+}
+
+
+.panel-default {
+    margin-bottom: 35px;
+}
+.panel {
+    margin-top: 20px;
+}
